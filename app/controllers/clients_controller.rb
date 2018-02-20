@@ -17,7 +17,7 @@ class ClientsController < ApplicationController
     def create
         @client = Client.new(client_params)
         if @client.save
-            flash[:notice]="Client was successfully registered"
+            flash[:success]="Client was successfully registered"
             redirect_to client_path(@client)
         else
             render 'new'
@@ -26,7 +26,7 @@ class ClientsController < ApplicationController
     
     def update
         if @client.update(client_params)
-            flash[:notice]="Client was successfully updated"
+            flash[:success]="Client was successfully updated"
             redirect_to client_path(@client)
         else
             render 'edit'
@@ -39,7 +39,7 @@ class ClientsController < ApplicationController
    
     def destroy
        @client.destroy
-       flash[:notice]="Client was successfully deleted"
+       flash[:success]="Client was successfully deleted"
        redirect_to clients_path
     end   
     
