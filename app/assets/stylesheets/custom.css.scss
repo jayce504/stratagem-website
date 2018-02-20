@@ -1,2 +1,51 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar {
+    background: #720fa8;
+    color: white;
+}
+
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bs-example-navbar-collapse-1 {
+    color: #fff;
+}
+
+.btn-xlarge {
+    font-size: 1.7em;
+    background-color: #720fa8;
+}
+
+footer{
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color:#777;
+}
+
+footer a:hover{
+    color: #222;
+}
+
+footer small {
+    float: right;
+    list-style: none;
+}
+
+footer ul li {
+    float: left;
+    margin-left: 15px;
+}
