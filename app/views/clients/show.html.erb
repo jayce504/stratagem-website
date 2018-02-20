@@ -1,0 +1,18 @@
+<h1>Clients</h1>
+<p>
+    Name: <%= @client.name %>
+</p>
+<p>
+    Address: <%= @client.address %>
+</p>
+<p>
+    Phone Number: <%= @client.phone_number %>
+</p>
+<p>
+    Appointed or Retained: <%= @client.appointed_retained %>
+</p>
+<p>
+    Alleged Offenses: <%= @client.alleged_offenses %>
+</p>
+
+<%=link_to 'Back to clients list', clients_path%>
