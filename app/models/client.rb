@@ -4,4 +4,6 @@ class Client < ActiveRecord::Base
     validates :phone_number, presence: true, length: {minimum:10,maximum:12}
     validates :appointed_retained, presence: true, length: {minimum:5,maximum:30}
     validates :alleged_offenses, presence: true, length: {minimum:5,maximum:500}
+    
+    belongs_to :user
 end
