@@ -31,10 +31,11 @@ class UsersController < ApplicationController
     
     def show
         @user = User.find(params[:id])
+        @user_clients=@user.clients.paginate(page: params[:page], per_page: 5)
     end
 
     def index
-        @users=User.all
+        @users=User.paginate(page: params[:page], per_page:5)
     end
     
 private
