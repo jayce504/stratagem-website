@@ -1,29 +1,29 @@
 <%= render 'layouts/form' %>
 
-<h1>Create a client</h1>
+<h1><span class="heading">Register A Client</h1></span>
 <%=form_for @client do |c| %>
 <p>
-    <%=c.label :name %><br/>
+    <span class = "heading"><%=c.label :name %></span><br/>
     <%=c.text_field :name %>
 </p>
 <p>
-    <%=c.label :address %><br/>
+    <span class = "heading"><%=c.label :address %></span><br/>
     <%=c.text_field :address %>
 </p>
 <p>
-    <%=c.label :phone_number %><br/>
+    <span class = "heading"><%=c.label :phone_number %></span><br/>
     <%=c.text_field :phone_number %>
 </p>
 <p>
-    <%=c.label :appointed_retained %><br/>
+    <span class = "heading"><%=c.label :appointed_retained %></span><br/>
     <%=c.text_field :appointed_retained %>
 </p>
 <p>
-    <%=c.label :alleged_offenses %><br/>
+    <span class = "heading"><%=c.label :alleged_offenses %></span><br/>
     <%=c.text_area :alleged_offenses %>
 </p>
 <p>
-    <%= c.submit %>
+   <%= c.submit %>
 </p>
 
 <% end %>

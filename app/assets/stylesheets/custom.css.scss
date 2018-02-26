@@ -1,9 +1,68 @@
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+    background-color: #000;
+    
+}
 
 .navbar {
     background: #720fa8;
     color: white;
+    border: none;
+}
+
+.navbar :visited {
+    text-decoration: none;
+}
+
+.homepage {
+    background: #000;
+}
+
+.heading {
+    color:white;
+}
+
+.jumbotron {
+     background-image: asset-url("sai-kiran-anagani-61187-unsplash.jpg");
+     background-size: cover;
+     height: 400px;
+     border: none;
+}
+
+.jumbotron h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.jumbotron h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.btn-xl {
+    font-size: 1.7em;
+    background-color: #720fa8;
+    margin-top: 50px;
+    margin-left: 400px;
+}
+
+.btn-lg {
+    font-size: 1.7em;
+    background-color: #720fa8;
+}
+
+.customized-button {
+    background-color: #720fa8;
+}
+
+.navbar-collapse {
+    color: #fff;
 }
 
 #logo {
@@ -20,9 +79,16 @@
     text-decoration: none;
 }
 
-.bs-example-navbar-collapse-1 {
+.dropdown-toggle {
     color: #fff;
+    font-weight: bold;
 }
+
+.navbar-right {
+    color: white;
+    font-weight: bold;
+}
+
 
 .btn-xlarge {
     font-size: 1.7em;
@@ -79,4 +145,9 @@ footer ul li {
 .listing { 
     list-style: none;
     padding-left: 0;
+}
+
+.form-control-search {
+    background-color: #000;
+    text-decoration: none;
 }

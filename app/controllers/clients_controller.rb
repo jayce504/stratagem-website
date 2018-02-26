@@ -1,9 +1,11 @@
 class ClientsController < ApplicationController
     
     before_action :set_client, only: [:edit, :update, :show, :destroy]
+    before_action :require_user, except: [:index, :show]
+    before_action :require_same_user, only: [:edit, :update, :destroy]
     
    def index
-    @clients=Client.all
+    @clients=Client.paginate(page: params[:page], per_page:5)
    end 
    
    def new
@@ -16,7 +18,7 @@ class ClientsController < ApplicationController
 
     def create
         @client = Client.new(client_params)
-        @client.user = User.first
+        @client.user = current_user
         if @client.save
             flash[:success]="Client was successfully registered"
             redirect_to client_path(@client)
@@ -46,11 +48,19 @@ class ClientsController < ApplicationController
     
     
     private
-    def set_client
-        @client = Client.find(params[:id])
-    end
-    
-    def client_params
-        params.require(:client).permit(:name, :address, :phone_number, :appointed_retained,:alleged_offenses)
-    end
+        def set_client
+            @client = Client.find(params[:id])
+        end
+        
+        def client_params
+            params.require(:client).permit(:name, :address, :phone_number, :appointed_retained,:alleged_offenses)
+        end
+        
+        def require_same_user
+            if current_user != @client.user
+            flash[:danger] = "You can only update or delete your own clients"
+            redirect_to root_path
+            end
+        end
+
 end
