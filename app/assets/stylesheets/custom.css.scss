@@ -35,14 +35,17 @@ body {
 .jumbotron h1 {
     color: #fff;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     letter-spacing: 1px;
     font-weight: bold;
 }
 
-.jumbotron h2 {
-    color: #fff;
+.jumbotron-subtitle {
+    color: #720fa8;
+    background-color: black;
     text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
 .btn-xl {
@@ -50,11 +53,14 @@ body {
     background-color: #720fa8;
     margin-top: 50px;
     margin-left: 400px;
+    border: solid 1px black;
 }
 
 .btn-lg {
     font-size: 1.7em;
     background-color: #720fa8;
+    border: none;
+    border: solid 1px black;
 }
 
 .customized-button {
