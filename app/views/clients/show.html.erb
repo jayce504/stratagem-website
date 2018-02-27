@@ -4,7 +4,7 @@
         <ul class = "listing">
             <div class = 'row center'>
                 <div class = 'col-md-4 col-md-offset-5'> 
-                    <li>Created by:</li>
+                    <span class = "heading"><li>Created by:</li></span>
                     <li><%= link_to gravatar_for(@client.user), user_path(@client.user) %></li>
                     <li class = "client-name">
                         <%= link_to @client.user.username, user_path(@client.user) %>
