@@ -57,7 +57,7 @@ class ClientsController < ApplicationController
         end
         
         def require_same_user
-            if current_user != @client.user
+            if current_user != @client.user and !current_user.admin?
             flash[:danger] = "You can only update or delete your own clients"
             redirect_to root_path
             end
