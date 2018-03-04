@@ -21,6 +21,9 @@
 <h4 class = "center description">Phone Number: </h4><%= simple_format(@client.phone_number) %>
 <h4 class = "center description">Appointed or Retained: </h4><%= simple_format(@client.appointed_retained) %>
 <h4 class = "center description">Alleged Offenses: </h4><%= simple_format(@client.alleged_offenses) %>
+    <% if @client.categories.any? %>
+        <p>Case Type: <%= render @client.categories %></p>
+    <% end %>
     <div class="client-actions">
         <% if logged_in? && (current_user == @client.user || current_user.admin?) %>
             <%= link_to "Update this client", edit_client_path(@client), class:"btn btn-xs btn-primary" %>

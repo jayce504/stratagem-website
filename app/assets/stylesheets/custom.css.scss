@@ -22,7 +22,15 @@ body {
 }
 
 .heading {
-    color:white;
+    color: white;
+    float: left;
+}
+
+.heading-nav {
+    color: white;
+    float: left;
+    padding-top: 15px;
+    padding-right: 15px;
 }
 
 .jumbotron {
@@ -133,11 +141,13 @@ footer ul li {
 }
 
 .client-name {
+    color: #000;
     font-weight: bold;
     font-size: 1.5em;
 }
 
 .client-info {
+    color: #000;
     border-top: 1px solid #eaeaea;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -157,4 +167,30 @@ footer ul li {
 .form-control-search {
     background-color: #000;
     text-decoration: none;
+}
+
+.badge {
+    background-color: #720fa8;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.input_checkbox input {
+    width: auto !important;
 }

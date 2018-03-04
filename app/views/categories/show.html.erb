@@ -1,0 +1,17 @@
+<span class = "heading"><h1 align = "center"><%= "Case Type: " + @category.name %></h1></span>
+    <div align = "center">
+        <% if logged_in? and current_user.admin? %>
+            <div class = "row">
+                <span class = "badge">
+                    <%= link_to "Change Case Type", edit_category_path(@category) %>
+                </span>
+            </div>
+        <% end %>
+        <%= will_paginate @category_clients %>
+    </div>
+   
+    <%= render 'clients/client', obj: @category_clients %>
+    
+    <div align = "center">
+        <%= will_paginate @category_clients %>
+    </div>

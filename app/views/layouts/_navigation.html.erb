@@ -32,7 +32,7 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
-        <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
+        <span class = "heading"><li><%= link_to 'Log Out', logout_path, method: :delete %></li></span>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="heading">Your Profile <%="[Admin]" if current_user.admin? %></span><span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -43,8 +43,8 @@
           </ul>
         </li>
         <% else %>
-        <li><%= link_to 'Log In',login_path %></li>
-        <li><%= link_to 'Sign Up', signup_path %></li>
+        <span class = "heading-nav"><li><%= link_to 'Log In',login_path %></li></span>
+        <span class = "heading-nav"><li><%= link_to 'Sign Up', signup_path %></li></span>
         <% end %>
          <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="heading">Case Types</span><span class="caret"></span></a>
