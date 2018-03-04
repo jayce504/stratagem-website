@@ -23,6 +23,19 @@
     <%=c.text_area :alleged_offenses %>
 </p>
 <p>
+    <div class = "form-group">
+        <div class = "row">
+            <span class = "heading">
+                <div class = "col-sm-8">
+                    <%= c.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+                    <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class:"checkbox")+cb.text} %>
+                    <% end %>
+                </div>
+            </span>
+        </div>
+    </div>
+</p>
+<p>
    <%= c.submit %>
 </p>
 

@@ -53,7 +53,7 @@ class ClientsController < ApplicationController
         end
         
         def client_params
-            params.require(:client).permit(:name, :address, :phone_number, :appointed_retained,:alleged_offenses)
+            params.require(:client).permit(:name, :address, :phone_number, :appointed_retained,:alleged_offenses, category_ids: [])
         end
         
         def require_same_user

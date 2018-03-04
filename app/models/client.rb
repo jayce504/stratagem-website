@@ -6,4 +6,6 @@ class Client < ActiveRecord::Base
     validates :alleged_offenses, presence: true, length: {minimum:5,maximum:500}
     
     belongs_to :user
+    has_many :client_categories
+    has_many :categories, through: :client_categories
 end
