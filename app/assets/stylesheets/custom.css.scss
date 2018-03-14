@@ -3,13 +3,14 @@
 @import "bootstrap";
 
 body {
-    background-color: #000;
+    background-color: #f2f2f2;
+    font-family: 'Raleway', sans-serif;
     
 }
 
 .navbar {
     background: #720fa8;
-    color: white;
+    color: #fff;
     border: none;
 }
 
@@ -18,30 +19,51 @@ body {
 }
 
 .homepage {
-    background: #000;
+    background: #f2f2f2;
 }
 
 .heading {
-    color: white;
-    float: left;
+    color: #fff;
 }
 
 .heading-nav {
-    color: white;
+    color: #fff;
     float: left;
     padding-top: 15px;
-    padding-right: 15px;
+    padding-right: 20px;
+}
+
+.form {
+    border: solid #000 4px;
+    padding-left: 90px;
+}
+
+textarea {
+    height: 15em;
+    width: 25em;
+}
+
+input[type=text] {
+    width: 25em;
+}
+
+
+a[href^="tel:"]  {
+    width: 25em;
 }
 
 .jumbotron {
-     background-image: asset-url("sai-kiran-anagani-61187-unsplash.jpg");
-     background-size: cover;
-     height: 400px;
-     border: none;
+  background-image: asset-url("matthew-hamilton-136795-unsplash.jpg");
+  background-size: cover;
+  width: 1500px;
+  height: 750px;
+  border: none;
+  padding: 140px 0 140px 0;
+     
 }
 
 .jumbotron h1 {
-    color: #fff;
+    color: #720fa8;
     text-align: center;
     margin-bottom: 20px;
     letter-spacing: 1px;
@@ -50,17 +72,18 @@ body {
 
 .jumbotron-subtitle {
     color: #720fa8;
-    background-color: black;
+    background-color: #f2f2f2;
     text-align: center;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 450px;
+    margin-right: 450px;
 }
+
 
 .btn-xl {
     font-size: 1.7em;
     background-color: #720fa8;
     margin-top: 50px;
-    margin-left: 400px;
+    margin-left: 600px;
     border: solid 1px black;
 }
 
@@ -69,6 +92,11 @@ body {
     background-color: #720fa8;
     border: none;
     border: solid 1px black;
+    
+}
+
+.btn-lg :hover {
+    text-decoration: none;
 }
 
 .customized-button {
@@ -94,7 +122,7 @@ body {
 }
 
 .dropdown-toggle {
-    color: #fff;
+    color: #000;
     font-weight: bold;
 }
 
@@ -109,7 +137,7 @@ body {
     background-color: #720fa8;
 }
 
-footer{
+footer {
     margin-top: 45px;
     padding-top: 5px;
     border-top: 1px solid #eaeaea;
@@ -143,7 +171,11 @@ footer ul li {
 .client-name {
     color: #000;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 0.75em;
+}
+
+.client-name-user-show {
+    color: #000;
 }
 
 .client-info {
@@ -151,6 +183,7 @@ footer ul li {
     border-top: 1px solid #eaeaea;
     padding-top: 15px;
     padding-bottom: 15px;
+    font-size: 1.5em;
 }
 
 .client-meta-details {
@@ -165,9 +198,14 @@ footer ul li {
 }
 
 .form-control-search {
-    background-color: #000;
+    background-color: #f2f2f2;
+    width: 25%;
     text-decoration: none;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
 }
+
+
 
 .badge {
     background-color: #720fa8;
@@ -177,7 +215,7 @@ footer ul li {
 }
 
 a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
 
@@ -187,7 +225,7 @@ a:hover {
 }
 
 a:visited {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
 

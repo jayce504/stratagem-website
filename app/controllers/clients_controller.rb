@@ -53,7 +53,9 @@ class ClientsController < ApplicationController
         end
         
         def client_params
-            params.require(:client).permit(:name, :address, :phone_number, :appointed_retained,:alleged_offenses, category_ids: [])
+            params.require(:client).permit(:name, :address, :phone_number, :appointed_retained, :alleged_offenses,  
+            :hearing_dates, :beginning_date, :disposition_date, :time_in_court, :time_outside_of_court, :time_waiting_in_court, 
+            :date_of_first_client_interaction, :sentencing_judge, :disposition_date, :case_outcome, category_ids:[])
         end
         
         def require_same_user
@@ -62,5 +64,4 @@ class ClientsController < ApplicationController
             redirect_to root_path
             end
         end
-
 end
